@@ -102,7 +102,7 @@ class TMC{
 		unset(self::$Funcs[$id], self::$PostMC[$id], self::$ARRAYs[$id]);
 		return true;
 	}
-	// уничтожаем поток
+	// получить контент
 	static function &GetContent($id){
 		if(!isset(self::$PostMC[$id])) return false;
 		$x=curl_multi_getcontent(self::$PostMC[$id]);
